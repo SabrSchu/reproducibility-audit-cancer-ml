@@ -1,0 +1,26 @@
+name: Python tests
+
+on: [pull_request]
+
+jobs:
+    run-tests:
+        name: Run Python tests
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out Git repository
+              uses: actions/checkout@v2
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.9'
+
+            - name: Setup conda environment
+              run: |
+                $CONDA/bin/conda env update --file tests/test_env.yml --name base
+                $CONDA/bin/pip install -e .
+
+            - name: Run tests
+              run: |
+                $CONDA/bin/pytest tests/

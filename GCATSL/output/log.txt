@@ -1,0 +1,7 @@
+-----Results-----
+The 1-th fold CV: AUC = 0.933674,  AUPR = 0.945486
+The 2-th fold CV: AUC = 0.928961,  AUPR = 0.942385
+The 3-th fold CV: AUC = 0.935794,  AUPR = 0.946594
+The 4-th fold CV: AUC = 0.926522,  AUPR = 0.936730
+The 5-th fold CV: AUC = 0.929589,  AUPR = 0.941455
+AUC mean = 0.930908, AUC std = 0.003355, AUPR mean = 0.942530, AUPR std = 0.003466
